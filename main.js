@@ -175,7 +175,7 @@ function reset() {
     birdie.body.allowGravity = false;
     birdie.angle = 0;
     birdie.reset(game.world.width / 4, game.world.height / 2);
-    birdie.scale.setTo(2, 2);
+    birdie.scale.setTo(1.5, 1.5);
     birdie.animations.play('fly');
     fingers.removeAll();
     invs.removeAll();
@@ -240,8 +240,8 @@ function spawnFinger(fingerY, flipped) {
     finger.body.allowGravity = false;
 
     // Flip finger! *GASP*
-    finger.scale.setTo(2, flipped ? -2 : 2);
-    finger.body.offset.y = flipped ? -finger.body.height * 2 : 0;
+    finger.scale.setTo(1.5, flipped ? -1.5 : 1.5);
+    finger.body.offset.y = flipped ? -finger.body.height * 1.5 : 0;
 
     // Move to the left
     finger.body.velocity.x = -SPEED;
