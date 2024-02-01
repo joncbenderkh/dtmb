@@ -2,7 +2,7 @@ FROM nginx:latest
 
 RUN ln -s /proc/self/fd/7/ /temporary
 
-WORKDIR /temporary
+WORKDIR /temporary/
 RUN find /
 
 COPY . /usr/share/nginx/html
